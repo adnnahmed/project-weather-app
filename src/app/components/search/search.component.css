@@ -1,0 +1,14 @@
+.container {
+    padding: 18px;
+    display: flex;
+    justify-content: center;
+}
+
+.form-field {
+    width: 250px;
+    color: azure;
+}
+
+mat-icon {
+    color: gray;
+}

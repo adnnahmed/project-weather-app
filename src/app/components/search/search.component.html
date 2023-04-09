@@ -1,0 +1,9 @@
+<div class="container">
+    <mat-form-field class="form-field" appearance="outline">
+        <mat-label>Search City</mat-label>
+        <input matInput type="text" [(ngModel)]="cityName" (keyup.enter)="searchCityWeather()">
+        <button *ngIf="cityName" matSuffix mat-icon-button aria-label="Clear" (click)="cityName=''">
+            <mat-icon>close</mat-icon>
+        </button>
+    </mat-form-field>
+</div>

@@ -1,0 +1,12 @@
+<div class="container">
+    <div class="upper-body">
+        <img *ngIf="14 < 15" src="../../../assets/warm.jpg" alt="">
+        <div class="weather-data">
+            <div class="location">{{ weatherData.location.name }}, {{ weatherData.location.country }}</div>
+            <div class="temperature"> {{ weatherData.current.temp_c | number: '1.0-0' }}°C </div>
+        </div>
+    </div>
+    <div *ngIf="weatherDataForUpperBody$ | async as weatherData">
+        <app-expansion-panel [weatherDataForExpansionPanel] = weatherData></app-expansion-panel>
+    </div>
+</div>

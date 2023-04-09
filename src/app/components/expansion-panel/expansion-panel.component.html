@@ -1,0 +1,49 @@
+<div class="container">
+    <mat-accordion>
+        <mat-expansion-panel (click)="expandPanel()">
+            <mat-expansion-panel-header>
+                <mat-panel-title>
+                    More Information
+                </mat-panel-title>
+            </mat-expansion-panel-header>
+            <div class="information-box">
+                <div class="information-block">
+                    <div class="information-block-label">
+                        <mat-icon fontIcon="thermostat"></mat-icon>
+                        <span class="information-block-label-description">Minimum Temperature</span>
+                    </div>
+                    <div class="information-block-value">
+                        {{ weatherDataForExpansionPanel.forecast.forecastday[0].day.mintemp_c }}°C
+                    </div>
+                </div>
+                <div class="information-block">
+                    <div class="information-block-label">
+                        <mat-icon fontIcon="water_drop"></mat-icon>
+                        <span class="information-block-label-description">Humidity</span>
+                    </div>
+                    <div class="information-block-value">
+                        {{ weatherDataForExpansionPanel.current.humidity }}%
+                    </div>
+                </div>
+                <div class="information-block">
+                    <div class="information-block-label">
+                        <mat-icon fontIcon="thermostat"></mat-icon>
+                        <span class="information-block-label-description">Maximum Temperature</span>
+                    </div>
+                    <div class="information-block-value">
+                        {{ weatherDataForExpansionPanel.forecast.forecastday[0].day.maxtemp_c }}°C
+                    </div>
+                </div>
+                <div class="information-block">
+                    <div class="information-block-label">
+                        <mat-icon fontIcon="air"></mat-icon>
+                        <span class="information-block-label-description">Wind</span>
+                    </div>
+                    <div class="information-block-value">
+                        {{ weatherDataForExpansionPanel.current.wind_kph }}KPH
+                    </div>
+                </div>
+            </div>
+        </mat-expansion-panel>
+    </mat-accordion>
+</div>
