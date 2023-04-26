@@ -9,9 +9,6 @@ import { WeatherData } from 'src/app/models/weather.model';
 })
 export class UpperBodyComponent implements OnInit {
 
-  // @Input()
-  // weatherData$!: Observable<WeatherData>;
-
   @Input()
   weatherDataForUpperBody$: Observable<WeatherData> | undefined;
 
